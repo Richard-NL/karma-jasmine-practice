@@ -16,8 +16,10 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'test-main.js',
-      {pattern: '"js/*.js"', included: false},
-      {pattern: 'js/*.js', included: false},
+	  'bower_components/mootools/dist/mootools-core.js',
+	  //{pattern: 'js/*.js', included: false},
+	  //{pattern: 'js/**/.js', included: true, served: true},
+      {pattern: 'js/helper/*.js', included: true, served: true},
       {pattern: 'test/**/*Spec.js', included: false}
     ],
 
@@ -58,7 +60,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox'],
+    browsers: ['Chrome'],
 
 
     // Continuous Integration mode
